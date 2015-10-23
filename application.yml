@@ -1,4 +1,4 @@
 serviceManager:
   loadSimulator:
-    sleepInterval: 9999
+    sleepInterval: 8888
     
