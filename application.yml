@@ -1,6 +1,6 @@
 serviceManager:
   loadSimulator:
-    sleepInterval: 1
+    sleepInterval: 700
 
 router:
   serviceDiscoveryFilter:
