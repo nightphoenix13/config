@@ -26,4 +26,4 @@ spring:
     
 serviceManager:
   loadSimulator:
-    sleepInterval: 2
+    sleepInterval: 700
