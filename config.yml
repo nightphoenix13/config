@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/tndavidson/uname-webservice/shared/config
+          uri: https://github.com/tndavidson/config
         
 server:
   port: 8888
