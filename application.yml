@@ -1,7 +1,0 @@
-serviceManager:
-  loadSimulator:
-    sleepInterval: 700
-
-router:
-  serviceDiscoveryFilter:
-    responseTimeThreshold: 300   
