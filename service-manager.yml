@@ -17,7 +17,13 @@ endpoints:
   refresh:
     enabled: true
     
-
+spring:
+  rabbitmq:
+    host: rabbit
+    port: 5672
+    username: guest
+    password: guest
+    
 serviceManager:
   loadSimulator:
     sleepInterval: 1

@@ -39,7 +39,15 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
-    
+
+spring:
+  rabbitmq:
+    host: rabbit
+    port: 5672
+    username: guest
+    password: guest
+      
 router:
   serviceDiscoveryFilter:
     responseTimeThreshold: 911  
+  
