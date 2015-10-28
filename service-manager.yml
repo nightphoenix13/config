@@ -20,4 +20,4 @@ endpoints:
 
 serviceManager:
   loadSimulator:
-    sleepInterval: 700
+    sleepInterval: 1
