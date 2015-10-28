@@ -15,9 +15,6 @@ zuul:
     uname: 
       path: /uname/**
       strip-prefix: true  
-    webapp:
-      path: /webapp/**
-      strip-prefix: true
     merchant-locator:
       path: /merchant-locator/**
       strip-prefix: true
