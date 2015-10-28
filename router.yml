@@ -1,0 +1,48 @@
+
+info:
+  component: Zuul Server
+  
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  routes:
+    uname: 
+      path: /uname/**
+      strip-prefix: true  
+    webapp:
+      path: /webapp/**
+      strip-prefix: true
+    merchant-locator:
+      path: /merchant-locator/**
+      strip-prefix: true
+    service-manager:
+      path: /service-manager/**
+      strip-prefix: true
+   
+eureka:
+  instance:
+    hostname: router
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+    
+server:
+  port: 8765
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    
+router:
+  serviceDiscoveryFilter:
+    responseTimeThreshold: 300  

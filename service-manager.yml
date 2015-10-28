@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+  
+eureka:
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+
+endpoints:
+  refresh:
+    enabled: true
+    
+
+serviceManager:
+  loadSimulator:
+    sleepInterval: 700
