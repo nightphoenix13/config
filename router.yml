@@ -42,4 +42,4 @@ logging:
     
 router:
   serviceDiscoveryFilter:
-    responseTimeThreshold: 300  
+    responseTimeThreshold: 911  
