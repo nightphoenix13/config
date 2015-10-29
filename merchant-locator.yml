@@ -3,8 +3,10 @@ server:
   
 eureka:
   instance:
+    lease-renewal-interval-in-seconds: 5
     prefer-ip-address: true
   client:
+    instance-info-replication-interval-seconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
@@ -16,3 +18,5 @@ spring:
     port: 5672
     username: guest
     password: guest
+    
+    
