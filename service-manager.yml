@@ -4,10 +4,11 @@ server:
   
 eureka:
   instance:
+    lease-renewal-interval-in-seconds: 5
     prefer-ip-address: true
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
   client:
+    instance-info-replication-interval-seconds: 5
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
@@ -27,3 +28,5 @@ spring:
 serviceManager:
   loadSimulator:
     sleepInterval: 700
+    
+   
