@@ -19,4 +19,7 @@ spring:
     username: guest
     password: guest
     
-    
+merchantLocator:
+  redis:
+    keyPrefix: "merchants:"
+    host: redisdb
