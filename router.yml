@@ -52,5 +52,5 @@ spring:
       
 router:
   serviceDiscoveryFilter:
-    responseTimeThreshold: 311  
+    responseTimeThreshold: 140  
   
