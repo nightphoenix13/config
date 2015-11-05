@@ -52,5 +52,7 @@ spring:
       
 router:
   serviceDiscoveryFilter:
-    responseTimeThreshold: 300  
+    thresholds:
+      scaleUp: 600
+      scaleDown: 200 
   
