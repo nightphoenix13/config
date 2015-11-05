@@ -28,5 +28,7 @@ spring:
 serviceManager:
   loadSimulator:
     sleepInterval: 700
+  docker:
+    imagePrefix: tndavidson
     
    
