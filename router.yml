@@ -50,10 +50,8 @@ spring:
     username: guest
     password: guest
       
-router:      
+router:
   serviceDiscoveryFilter:
-    responseTimeThreshold: 300
-    thresholds:
-      scaleUp: 400
-      scaleDown: 300 
+    scale-down-threshold: 200
+    scale-up-threshold: 600
   
