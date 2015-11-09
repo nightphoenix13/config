@@ -54,4 +54,8 @@ router:
   serviceDiscoveryFilter:
     scale-down-threshold: 200
     scale-up-threshold: 600
+    responseTimeThreshold: 300
+    thresholds:
+      scaleUp: 400
+      scaleDown: 300 
   
