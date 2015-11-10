@@ -21,7 +21,9 @@ zuul:
     service-manager:
       path: /service-manager/**
       strip-prefix: true
-   
+    foo:
+      path: /foo/**
+      strip-prefix: true
   
 eureka:
   instance:
