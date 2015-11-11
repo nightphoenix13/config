@@ -60,4 +60,24 @@ router:
     thresholds:
       scaleUp: 400
       scaleDown: 300 
-  
+  services:
+    merchant-locator:
+      deployments:
+        "merchant-locator_1.0":
+          auto-start: true
+          auto-scale: true
+          max-instances: 10
+          min-instances: 1
+          traffic-ratio: 9
+        "merchant-locator_2.0":
+          auto-start: true
+          auto-scale: false
+          max-instances: 1
+          min-instances: 1
+          traffic-ratio: 1
+    service-manager:
+      deployments:
+        service-manager:
+          auto-start: false
+          auto-scale: false
+          traffic-ratio: 10
