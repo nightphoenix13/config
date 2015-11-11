@@ -63,17 +63,14 @@ router:
   services:
     merchant-locator:
       deployments:
-        "merchant-locator_1.0":
-          auto-start: true
+        merchant-locator-1_0:
           auto-scale: true
-          max-instances: 10
+          auto-start: true
           min-instances: 1
           traffic-ratio: 9
-        "merchant-locator_2.0":
-          auto-start: true
+        merchant-locator-2_0:
           auto-scale: false
-          max-instances: 1
-          min-instances: 1
+          auto-start: true
           traffic-ratio: 1
     service-manager:
       deployments:
