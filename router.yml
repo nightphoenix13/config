@@ -53,6 +53,9 @@ spring:
     password: guest
      
 router:
+   auto-scale:
+    scale-down-threshold: 200
+    scale-up-threshold: 600
   serviceDiscoveryFilter:
     scale-down-threshold: 200
     scale-up-threshold: 600
