@@ -71,7 +71,7 @@ router:
         merchant-locator-v2_0:
           auto-scale: false
           auto-start: true
-          traffic-ratio: 1
+          traffic-ratio: 2
     service-manager:
       deployments:
         service-manager:
