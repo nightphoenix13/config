@@ -53,16 +53,9 @@ spring:
     password: guest
      
 router:
-   auto-scale:
+  auto-scale:
     scale-down-threshold: 200
     scale-up-threshold: 600
-  serviceDiscoveryFilter:
-    scale-down-threshold: 200
-    scale-up-threshold: 600
-    responseTimeThreshold: 300
-    thresholds:
-      scaleUp: 400
-      scaleDown: 300 
   services:
     merchant-locator:
       deployments:
@@ -70,7 +63,7 @@ router:
           auto-scale: true
           auto-start: true
           min-instances: 1
-          traffic-ratio: 1
+          traffic-ratio: 9
         merchant-locator-v2_0:
           auto-scale: false
           auto-start: true
@@ -81,6 +74,4 @@ router:
           auto-start: false
           auto-scale: false
           traffic-ratio: 10
-
-foo:
-  bar: test2
+ 
