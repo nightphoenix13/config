@@ -53,6 +53,7 @@ spring:
     password: guest
       
 router:
+  foo: foovalue1
   serviceDiscoveryFilter:
     scale-down-threshold: 222
     scale-up-threshold: 600
