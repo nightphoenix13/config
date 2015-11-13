@@ -63,13 +63,13 @@ router:
           auto-scale: true
           auto-start: true
           min-instances: 1
-          traffic-ratio: 0
+          traffic-ratio: 1
         merchant-locator-v2_0:
           auto-scale: false
           auto-start: true
           min-instances: 1
           max-instances: 1
-          traffic-ratio: 1
+          traffic-ratio: 0
     service-manager:
       deployments:
         service-manager:
