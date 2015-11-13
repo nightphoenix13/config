@@ -63,7 +63,7 @@ router:
           auto-scale: true
           auto-start: true
           min-instances: 1
-          traffic-ratio: 0
+          traffic-ratio: 1
     service-manager:
       deployments:
         service-manager:
