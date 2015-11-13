@@ -65,7 +65,9 @@ router:
           min-instances: 1
           traffic-ratio: 2
         merchant-locator-v2_0:
-          auto-scale: false
+          auto-scale: true
+          max-instances: 1
+          min-instances: 0
           auto-start: true
           traffic-ratio: 1
     service-manager:
