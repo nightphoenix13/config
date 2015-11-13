@@ -69,7 +69,7 @@ router:
           auto-start: true
           min-instances: 1
           max-instances: 1
-          traffic-ratio: 1
+          traffic-ratio: 0
     service-manager:
       deployments:
         service-manager:
