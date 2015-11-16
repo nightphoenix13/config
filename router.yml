@@ -54,7 +54,7 @@ spring:
      
 router:
   auto-scale:
-    scale-down-threshold: 200
+    scale-down-threshold: 300
     scale-up-threshold: 600
   services:
     merchant-locator:
