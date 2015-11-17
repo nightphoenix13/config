@@ -22,4 +22,4 @@ spring:
 merchantLocator:
   redis:
     keyPrefix: "merchants:"
-    host: redisdb
+    
