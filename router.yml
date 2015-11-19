@@ -57,13 +57,13 @@ router:
     scale-down-threshold: 300
     scale-up-threshold: 600
   services:
-    #merchant-locator:
-    #  deployments:
-    #    merchant-locator-v1_0:
-    #      auto-scale: true
-    #      auto-start: true
-    #      min-instances: 1
-    #      traffic-ratio: 1
+    merchant-locator:
+      deployments:
+        merchant-locator-v1_0:
+          auto-scale: true
+          auto-start: true
+          min-instances: 1
+          traffic-ratio: 1
     service-manager:
       deployments:
         service-manager:
