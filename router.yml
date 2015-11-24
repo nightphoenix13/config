@@ -60,7 +60,7 @@ router:
     merchant-locator:
       deployments:
         merchant-locator-v1_0:
-          auto-scale: true
+          auto-scale: false
           auto-start: true
           min-instances: 1
           traffic-ratio: 1
