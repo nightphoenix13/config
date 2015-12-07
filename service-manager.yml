@@ -1,33 +1,11 @@
-server:
-  port: 8080
+server: 
+  port: 8760
 
-  
 eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 5
-    prefer-ip-address: true
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
   client:
-    instance-info-replication-interval-seconds: 5
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
     registerWithEureka: true
     fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
-
-endpoints:
-  refresh:
-    enabled: true
-    
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
-    
-serviceManager:
-  loadSimulator:
-    sleepInterval: 700
 
 serviceManager:
   docker-image-prefix: tndavidson
@@ -36,49 +14,21 @@ serviceManager:
   enable-auto-bootstrap: true
   auto-bootstrap:
     ############## CSRT Core Processes: #############
-    config:
-      discovery-client: true
-      command: "java -jar /Users/timd/git/csrt-framework/bin/config-0.2.1-SNAPSHOT-jar-with-dependencies.jar"
-      port: 8888
+    configserver: 
+      discovery-client: true 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/config-0.2.1-SNAPSHOT.jar" 
+      port: 8768 
       hosts: 
-        - "24.28.180.212"
-    discovery:
-      discovery-client: true
-      command: "java -jar /Users/timd/git/csrt-framework/bin/discovery-0.2.1-SNAPSHOT-jar-with-dependencies.jar"
-      port: 8761
-      hosts:
-        - "24.28.180.212"
-    router:
-      discovery-client: true
-      command: "java -jar /Users/timd/git/csrt-framework/bin/router-0.2.1-SNAPSHOT-jar-with-dependencies.jar"
-      port: 8765
-      hosts:
-        - "24.28.180.212"
-    turbine:
-      discovery-client: true
-      command: "java -jar /Users/timd/git/csrt-framework/bin/turbine-1.0-SNAPSHOT-jar-with-dependencies.jar"
-      port: 8762
-      hosts:
-        - "24.28.180.212"
-    redisdb:
-      discovery-client: false
-      command: "/Users/timd/git/csrt-framework/bin/install_and_start_redis_shell_script"
-      verify-script: "/Users/timd/git/csrt-framework/bin/verify_redis_running_shell_script"
-      port: 6379
-      hosts:
-        - "24.28.180.212"
-    rabbitmq:
-      discovery-client: false
-      command: "/Users/timd/git/csrt-framework/bin/install_and_start_rabbit_shell_script"
-      verify-script: "/Users/timd/git/csrt-framework/bin/verify_redis_running_shell_script"
-      port: 4369
-      hosts:
-        - "24.28.180.212"
-    ############## API Services: #############
-    merchant-locator:
-      discovery-client: true
-      command: "java -jar /Users/timd/git/csrt-framework/bin/merchant-locator-1.0-jar-with-dependencies.jar"
-      port: 8080
-      hosts:
-        - "24.28.180.212"
-   
+        - "phoenix-Inspiron-5721"
+    discovery: 
+      discovery-client: true 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/discovery-0.2.1-SNAPSHOT.jar" 
+      port: 8761 
+      hosts: 
+        - "phoenix-Inspiron-5721"
+    router: 
+      discovery-client: true 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/router-0.2.1-SNAPSHOT.jar" 
+      port: 8765 
+      hosts: 
+        - "phoenix-Inspiron-5721"

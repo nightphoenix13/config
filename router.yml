@@ -1,41 +1,12 @@
-
 info:
   component: Zuul Server
-  
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
 
-zuul:
-  routes:
-    uname: 
-      path: /uname/**
-      strip-prefix: true  
-    merchant-locator:
-      path: /merchant-locator/**
-      strip-prefix: true
-    service-manager:
-      path: /service-manager/**
-      strip-prefix: true
-    foo:
-      path: /foo/**
-      strip-prefix: true
-  
 eureka:
   instance:
-    hostname: router
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 5
   client:
-    instance-info-replication-interval-seconds: 5
-    registerWithEureka: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
     fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
     
 server:
   port: 8765
@@ -44,30 +15,4 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
-
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
      
-router:
-  auto-scale:
-    scale-down-threshold: 300
-    scale-up-threshold: 600
-  services:
-    merchant-locator:
-      deployments:
-        merchant-locator-v1_0:
-          auto-scale: false
-          auto-start: true
-          min-instances: 1
-          traffic-ratio: 1
-    service-manager:
-      deployments:
-        service-manager:
-          auto-start: false
-          auto-scale: false
-          traffic-ratio: 10
- 
