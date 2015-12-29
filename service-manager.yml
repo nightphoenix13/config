@@ -29,7 +29,7 @@ serviceManager:
         - "phoenix-Inspirion-5721"
     query-service: 
       discovery-client: true 
-      command: "/home/phoenix/git/csrt-framework/bin/jars//home/phoenix/git/csrt-framework/bin/jars/query-service-0.3.1-RELEASE.jar" 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/query-service-0.3.1-RELEASE.jar" 
       port: 8762 
       hosts: 
         - "phoenix-Inspirion-5721"
