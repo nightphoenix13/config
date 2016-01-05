@@ -1,9 +1,6 @@
 server: 
   port: 8760
 
-server: 
-  port: 8760
-
 eureka:
   client:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
