@@ -30,18 +30,18 @@ serviceManager:
       port: 8765 
       hosts: 
         - "phoenix-Inspiron-5721"
-#    query-service: 
-#      discovery-client: true 
-#      command: "/home/phoenix/git/csrt-framework/bin/jars/query-service-0.3.1-RELEASE.jar" 
-#      port: 8762 
-#      hosts: 
-#        - "phoenix-Inspiron-5721"
-#    redis-query-service: 
-#      discovery-client: true 
-#      command: "/home/phoenix/git/csrt-framework/bin/jars/redis-query-service-0.3.1-RELEASE.jar" 
-#      port: 8763 
-#      hosts: 
-#        - "phoenix-Inspiron-5721"
+    query-service: 
+      discovery-client: true 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/query-service-0.3.1-RELEASE.jar" 
+      port: 8762 
+      hosts: 
+        - "phoenix-Inspiron-5721"
+    redis-query-service: 
+      discovery-client: true 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/redis-query-service-0.3.1-RELEASE.jar" 
+      port: 8763 
+      hosts: 
+        - "phoenix-Inspiron-5721"
     discovery: 
       discovery-client: true 
       command: "/home/phoenix/git/csrt-framework/jars/" 
