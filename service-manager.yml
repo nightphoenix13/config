@@ -17,7 +17,7 @@ serviceManager:
     ############## CSRT Core Processes: #############
     discovery: 
       discovery-client: true 
-      command: "/home/phoenix/git/csrt-framework/bin/jars/discovery-0.3.1-RELEASE.jar" 
+      command: "/home/phoenix/git/csrt-framework/bin/jars/discovery-0.3.2-RELEASE.jar" 
       port: 8761 
       hosts: 
         - "phoenix-Inspiron-5721"
